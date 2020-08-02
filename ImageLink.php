@@ -9,14 +9,17 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 /**
  * Register this extension on Special:Version
  */
+global $wgExtensionCredits;
 $wgExtensionCredits['parserhook'][] = array(
   'name' => 'ImageLink',
   'description' => 'Allows creation of clickable Imagelinks',
+  'license-name' => 'GPL-3.0-or-later',
   'author' => array( 'Wolfgang Fahl','Hanh Le','Alexander Krau&szlig;' ),
-  'url' => 'http://wiki.bitplan.com/ImageLink',
-  'version' => '0.0.3'
+  'url' => 'http://wiki.bitplan.com/index.php/ImageLink',
+  'version' => '0.0.4'
 );
 
+global $wgHooks;
 $wgHooks['ParserFirstCallInit'][] = 'wfRegisterImageLink';
  
 /**
